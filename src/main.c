@@ -23,7 +23,7 @@ static word_t first_word_between;
 static word_t second_word;
 static word_t second_word_between;
 static word_t third_word;
-static const char *hours[] = {"twaalf","een","twee","drie","vier","vijf","zes","zeven","acht","negen","tien","elf","twaalf"};
+static const char *hours[] = {"twaalf","een","twee","drie","vier"," vijf ","zes","zeven","acht"," negen ","tien","elf","twaalf"};
 
 TextLayer *text_layer_setup(Window * window, GRect frame, GFont font) {
 	TextLayer *layer = text_layer_create(frame);
@@ -44,7 +44,7 @@ static const char *hour_string(int h) {
 }
 static const char *min_string(int m) {
 	if(m == 5) {
-		return "vijf";
+		return " vijf ";
 	} else {
 		return "tien";
 	}
@@ -156,7 +156,7 @@ static void handle_tick(struct tm *tick_time, TimeUnits units_changed) {
 	third_word.old_text = third_word.text;
 
 #ifdef DEBUG_FAST
-	nederlands_format(tick_time->tm_min % 24,  tick_time->tm_sec);
+	nederlands_format(tick_time->tm_min % 24, tick_time->tm_sec);
 #else
 	nederlands_format(tick_time->tm_hour,  tick_time->tm_min);
 #endif
