@@ -15,16 +15,16 @@
     "resources": {
         "media": [
             {
-                "characterRegex": "[a-z]",
-                "type": "font",
-                "name": "FONT_40",
-                "file": "fonts/Georgia.ttf"
-            },
-            {
                 "characterRegex": "[a-z ]",
                 "type": "font",
                 "name": "FONT_30",
                 "file": "fonts/GeorgiaSmall.ttf"
+            },
+            {
+                "characterRegex": "[a-z ]",
+                "type": "font",
+                "name": "FONT_40",
+                "file": "fonts/Georgia.ttf"
             }
         ]
     }
